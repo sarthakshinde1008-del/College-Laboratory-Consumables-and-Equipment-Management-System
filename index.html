@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laboratory Inventory</title>
+
+    <style>
+        body {
+            background-color: #bce2ee;
+            margin: 0;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .header {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .form-box {
+            background-color: #d3d3d3;
+            border: 1px solid #333;
+            width: 380px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        td {
+            padding: 6px;
+            font-size: 14px;
+        }
+
+        input, select {
+            width: 170px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            color: white;
+            border: none;
+            padding: 9px 18px;
+            margin-top: 12px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .submit {
+            background-color: green;
+        }
+
+        .show {
+            background-color: blue;
+            text-decoration: none;
+            display: inline-block;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        COLLEGE LABORATORY INVENTORY
+    </div>
+
+    <div class="form-box">
+
+        <h3>ADD LABORATORY ITEM</h3>
+
+        <form action="/save" method="POST">
+
+            <table>
+                <tr>
+                    <td>Item Name:</td>
+                    <td>
+                        <input type="text" name="name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Category:</td>
+                    <td>
+                        <select name="category" required>
+                            <option value="">Select</option>
+                            <option value="Equipment">Equipment</option>
+                            <option value="Consumable">Consumable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Quantity:</td>
+                    <td>
+                        <input type="number" name="quantity"
+                               min="0" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Unit:</td>
+                    <td>
+                        <select name="unit" required>
+                            <option value="">Select</option>
+                            <option value="Pieces">Pieces</option>
+                            <option value="Boxes">Boxes</option>
+                            <option value="Bottles">Bottles</option>
+                            <option value="Litres">Litres</option>
+                            <option value="Packets">Packets</option>
+                            <option value="Kg">Kg</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Laboratory:</td>
+                    <td>
+                        <input type="text" name="lab" required>
+                    </td>
+                </tr>
+            </table>
+
+            <button type="submit" class="btn submit">
+                SAVE ITEM
+            </button>
+
+        </form>
+
+        <a href="/show" class="btn show">
+            SHOW INVENTORY
+        </a>
+
+    </div>
+
+</body>
+</html>
