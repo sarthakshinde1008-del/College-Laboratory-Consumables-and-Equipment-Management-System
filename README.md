@@ -1,0 +1,2 @@
+# College-Laboratory-Consumables-and-Equipment-Management-System
+The College Laboratory Consumables and Equipment Management System is a web-based application developed using Python Flask and MySQL. It helps manage laboratory inventory by allowing users to add, view, update, delete, and search items. It also provides low-stock alerts to support efficient inventory tracking and laboratory resource management.
